@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wchisp-web Test Site</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header>
+        <h1>wchisp-web Test Site</h1>
+        <p>Connect over WebUSB or Web Serial, inspect chip info, and run a basic flash flow.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Transport</h2>
+        <div class="row">
+          <button id="connect-usb">Connect WebUSB</button>
+          <button id="connect-serial">Connect Web Serial</button>
+          <button id="disconnect" class="ghost">Disconnect</button>
+        </div>
+        <div class="row options">
+          <label>
+            Serial baud
+            <input id="baud" type="number" value="115200" min="9600" step="1" />
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Actions</h2>
+        <div class="row options">
+          <label>
+            Firmware file
+            <input id="firmware" type="file" accept=".bin,.hex,.elf" />
+          </label>
+        </div>
+        <div class="row">
+          <button id="read-config">Read Config</button>
+          <button id="flash">Flash</button>
+          <label class="check"><input id="erase" type="checkbox" checked />Erase</label>
+          <label class="check"><input id="verify" type="checkbox" checked />Verify</label>
+          <label class="check"><input id="reset" type="checkbox" checked />Reset</label>
+          <label class="check"><input id="unprotect" type="checkbox" />Unprotect</label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Status</h2>
+        <pre id="status" class="status">Idle</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Log</h2>
+        <pre id="log" class="log"></pre>
+      </section>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

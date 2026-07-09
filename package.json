@@ -1,0 +1,26 @@
+{
+  "name": "wchisp-web",
+  "version": "0.2.0",
+  "description": "Browser WebUSB/WebSerial TypeScript port of ch32-rs/wchisp for WCH ISP flashing.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "serve": "npx serve . -p 8294",
+    "dev": "npx concurrently \"tsc -p tsconfig.json --watch\" \"npm run serve\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["wch", "wchisp", "ch32", "webusb", "webserial", "flasher"],
+  "license": "GPL-2.0-only",
+  "devDependencies": { "typescript": "^5.5.0" }
+}

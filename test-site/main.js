@@ -1,4 +1,4 @@
-import { WchIspFlasher, WebUsbTransport, WebSerialTransport } from '/dist/index.js';
+import { WchIspFlasher, WebUsbTransport, WebSerialTransport } from './dist/index.js';
 
 const statusEl = document.querySelector('#status');
 const logEl = document.querySelector('#log');

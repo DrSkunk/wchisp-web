@@ -33,6 +33,14 @@
     "webserial",
     "flasher"
   ],
+  "homepage": "https://www.npmjs.com/package/wchisp-web",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrSkunk/wchisp-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DrSkunk/wchisp-web/issues"
+  },
   "license": "GPL-2.0-only",
   "devDependencies": {
     "rolldown": "^1.1.5",

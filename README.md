@@ -1,10 +1,20 @@
 # wchisp-web
 
+[![npm version](https://img.shields.io/npm/v/wchisp-web.svg)](https://www.npmjs.com/package/wchisp-web)
+
 A browser-oriented TypeScript port of the core [`ch32-rs/wchisp`](https://github.com/ch32-rs/wchisp) flashing protocol. It supports WebUSB and Web Serial transports, chip identification, config reads/writes, unprotect, code flash erase/program/verify/reset, Intel HEX/BIN/ELF loading, and EEPROM/data flash read/write/erase helpers.
+
+Published npm package: https://www.npmjs.com/package/wchisp-web
 
 ## Install/build
 
 Node.js 18+ is required. Then install dependencies and build the library:
+
+```bash
+npm install wchisp-web
+```
+
+For local development of this repository:
 
 ```bash
 npm install

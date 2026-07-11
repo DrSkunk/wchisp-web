@@ -44,7 +44,14 @@ export type ChipFamily = {
 };
 
 export class ChipDatabase {
-  constructor(public families: ChipFamily[] = BUILTIN_CHIPS) {}
+  public families: ChipFamily[];
+
+  constructor(families?: ChipFamily[]) {
+    // Note: resolved in the body (not as a default parameter) because default
+    // parameters referencing a forward-declared const get miscompiled by some
+    // minifiers (oxc/Vite 8), producing "this.families is not iterable".
+    this.families = families ?? BUILTIN_CHIPS;
+  }
 
   static fromJson(value: unknown): ChipDatabase {
     if (Array.isArray(value)) return new ChipDatabase(normalizeFamilies(value as ChipFamily[]));

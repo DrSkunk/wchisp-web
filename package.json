@@ -1,6 +1,6 @@
 {
   "name": "wchisp-web",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Browser WebUSB/WebSerial TypeScript port of ch32-rs/wchisp for WCH ISP flashing.",
   "type": "module",
   "main": "dist/index.js",
